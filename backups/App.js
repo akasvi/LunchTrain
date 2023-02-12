@@ -219,3 +219,130 @@ const styles = StyleSheet.create({
   },
 });
 */
+
+4069;
+
+/*
+import React from "react";
+import { View, Text, StyleSheet } from "react-native";
+import PlaceholderRestaurant from "./components/PlaceholderRestaurant";
+
+import burgerBarImage from "./images/burger_bar.jpg";
+import pizzaPalaceImage from "./images/pizza_palace.jpg";
+import sushiStationImage from "./images/sushi_station.jpg";
+
+const App = () => {
+  return (
+    <View style={styles.restaurantGallery}>
+      <Text style={styles.subtitle}> Today's Lunch Recommendation </Text>
+      <PlaceholderRestaurant
+        restaurantName="Burger Bar"
+        restaurantImage={burgerBarImage}
+        colleagueCount={4}
+      />
+      <PlaceholderRestaurant
+        restaurantName="Pizza Palace"
+        restaurantImage={pizzaPalaceImage}
+        colleagueCount={2}
+      />
+      <PlaceholderRestaurant
+        restaurantName="Sushi Station"
+        restaurantImage={sushiStationImage}
+        colleagueCount={6}
+      />
+    </View>
+  );
+};
+
+export default App;
+
+const styles = StyleSheet.create({
+  subtitle: {
+    fontSize: 17,
+    fontWeight: "semibold",
+    color: "#fff",
+    backgroundColor: "#000",
+  },
+  restaurantGallery: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
+*/
+
+5069;
+
+/*
+import React, { useState } from "react";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import PlaceholderRestaurant from "./components/PlaceholderRestaurant";
+
+import burgerBarImage from "./images/burger_bar.jpg";
+import pizzaPalaceImage from "./images/pizza_palace.jpg";
+import sushiStationImage from "./images/sushi_station.jpg";
+
+const App = () => {
+  const [selectedRestaurant, setSelectedRestaurant] = useState(null);
+  const [restaurants, setRestaurants] = useState([
+    {
+      id: 1,
+      restaurantName: "Burger Bar",
+      restaurantImage: burgerBarImage,
+      colleagueCount: 4,
+    },
+    {
+      id: 2,
+      restaurantName: "Pizza Palace",
+      restaurantImage: pizzaPalaceImage,
+      colleagueCount: 2,
+    },
+    {
+      id: 3,
+      restaurantName: "Sushi Station",
+      restaurantImage: sushiStationImage,
+      colleagueCount: 6,
+    },
+  ]);
+
+  const handleRestaurantPress = (id) => {
+    setSelectedRestaurant(id);
+    let updatedRestaurants = [...restaurants];
+    let selectedIndex = restaurants.findIndex((r) => r.id === id);
+    updatedRestaurants[selectedIndex].colleagueCount += 1;
+    setRestaurants(updatedRestaurants);
+  };
+
+  return (
+    <View style={styles.restaurantGallery}>
+      <Text style={styles.subtitle}>Today's Lunch Recommendation</Text>
+      {restaurants.map((restaurant) => (
+        <PlaceholderRestaurant
+          key={restaurant.id}
+          restaurantName={restaurant.restaurantName}
+          restaurantImage={restaurant.restaurantImage}
+          colleagueCount={restaurant.colleagueCount}
+          selected={selectedRestaurant === restaurant.id}
+          onPress={() => handleRestaurantPress(restaurant.id)}
+        />
+      ))}
+    </View>
+  );
+};
+
+export default App;
+
+const styles = StyleSheet.create({
+  subtitle: {
+    fontSize: 17,
+    fontWeight: "semibold",
+    color: "#fff",
+    backgroundColor: "#000",
+  },
+  restaurantGallery: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
+*/
