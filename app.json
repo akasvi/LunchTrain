@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "AI-lunchille",
-    "slug": "AI-lunchille",
+    "name": "LunchTrain",
+    "slug": "lunchtrain",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -14,9 +14,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
