@@ -5,6 +5,7 @@ import PlaceholderRestaurant from "./components/PlaceholderRestaurant";
 import burgerBarImage from "./images/burger_bar.jpg";
 import pizzaPalaceImage from "./images/pizza_palace.jpg";
 import sushiStationImage from "./images/sushi_station.jpg";
+import pompierImage from "./images/pompier_albert.jpg";
 
 const restaurants = [
   {
@@ -17,12 +18,18 @@ const restaurants = [
     id: 2,
     restaurantName: "Pizza Palace",
     restaurantImage: pizzaPalaceImage,
-    colleagueCount: 0,
+    colleagueCount: 1,
   },
   {
     id: 3,
     restaurantName: "Sushi Station",
     restaurantImage: sushiStationImage,
+    colleagueCount: 4,
+  },
+  {
+    id: 4,
+    restaurantName: "Pompier",
+    restaurantImage: pompierImage,
     colleagueCount: 4,
   },
 ];
@@ -31,12 +38,12 @@ const App = () => {
   const [selectedRestaurant, setSelectedRestaurant] = useState(null);
 
   const handlePress = (id) => {
-    let updatedRestaurants = [...restaurants];
-    let selectedIndex = updatedRestaurants.findIndex((r) => r.id === id);
-    let selectedRest = updatedRestaurants[selectedIndex];
+    const updatedRestaurants = [...restaurants];
+    const selectedIndex = updatedRestaurants.findIndex((r) => r.id === id);
+    const selectedRest = updatedRestaurants[selectedIndex];
 
     if (selectedRestaurant) {
-      let previouslySelectedIndex = updatedRestaurants.findIndex(
+      const previouslySelectedIndex = updatedRestaurants.findIndex(
         (r) => r.id === selectedRestaurant.id
       );
       updatedRestaurants[previouslySelectedIndex].colleagueCount -= 1;
@@ -84,7 +91,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   restaurantContainer: {
-    marginTop: 20,
+    marginTop: 10,
   },
 });
 
