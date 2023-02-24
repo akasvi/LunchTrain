@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
   header: {
     fontWeight: "bold",
     fontSize: 20,
-    marginTop: 100,
+    marginTop: 60,
     marginBottom: 20,
   },
   restaurantContainer: {
